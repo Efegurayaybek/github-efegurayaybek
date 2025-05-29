@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController" alignment="CENTER" spacing="20.0" styleClass="login-container">
+    <children>
+        <!-- Title -->
+        <Label text="🎮 FBG Game 🎮" styleClass="title" />
+        <Label text="Flappy Bird Game" styleClass="subtitle" />
+
+        <!-- Login Form -->
+        <VBox spacing="15.0" styleClass="form-container" alignment="CENTER">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Username:" styleClass="form-label" />
+                        <TextField fx:id="usernameField" promptText="Enter your username" styleClass="form-input" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Password:" styleClass="form-label" />
+                        <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="form-input" />
+                    </children>
+                </VBox>
+
+                <!-- Message Label -->
+                <Label fx:id="messageLabel" text="" styleClass="message" />
+
+                <!-- Buttons -->
+                <HBox spacing="10.0" alignment="CENTER">
+                    <children>
+                        <Button fx:id="loginButton" onAction="#handleLogin" text="🚀 Login" styleClass="btn-primary" />
+                        <Button fx:id="registerButton" onAction="#handleRegister" text="📝 Register" styleClass="btn-secondary" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+        </VBox>
+
+        <!-- Demo Accounts Info -->
+        <VBox spacing="5.0" alignment="CENTER" styleClass="demo-info">
+            <children>
+                <Label text="🎯 Demo Accounts:" styleClass="demo-title" />
+                <Label text="Username: demo | Password: 1234" styleClass="demo-account" />
+                <Label text="Username: test | Password: test" styleClass="demo-account" />
+            </children>
+        </VBox>
+
+        <!-- Instructions -->
+        <VBox spacing="5.0" alignment="CENTER" styleClass="instructions">
+            <children>
+                <Label text="🎮 How to Play:" styleClass="instructions-title" />
+                <Label text="• Use SPACE key or mouse click to jump" styleClass="instruction-item" />
+                <Label text="• Avoid hitting the pipes" styleClass="instruction-item" />
+                <Label text="• Try to get the highest score!" styleClass="instruction-item" />
+                <Label text="• Easy mode: Wider gaps for easier gameplay" styleClass="instruction-item" />
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

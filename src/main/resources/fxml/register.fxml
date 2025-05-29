@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController" alignment="CENTER" spacing="20.0" styleClass="register-container">
+    <children>
+        <!-- Title -->
+        <Label text="📝 Create Account" styleClass="title" />
+        <Label text="Join FBG Game!" styleClass="subtitle" />
+
+        <!-- Registration Form -->
+        <VBox spacing="15.0" styleClass="form-container" alignment="CENTER">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Username:" styleClass="form-label" />
+                        <TextField fx:id="usernameField" promptText="Choose a username (min 3 characters)" styleClass="form-input" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Password:" styleClass="form-label" />
+                        <PasswordField fx:id="passwordField" promptText="Choose a password (min 4 characters)" styleClass="form-input" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Confirm Password:" styleClass="form-label" />
+                        <PasswordField fx:id="confirmPasswordField" promptText="Confirm your password" styleClass="form-input" />
+                    </children>
+                </VBox>
+
+                <!-- Message Label -->
+                <Label fx:id="messageLabel" text="" styleClass="message" />
+
+                <!-- Buttons -->
+                <HBox spacing="10.0" alignment="CENTER">
+                    <children>
+                        <Button fx:id="registerButton" onAction="#handleRegister" text="✅ Register" styleClass="btn-primary" />
+                        <Button fx:id="backButton" onAction="#handleBack" text="⬅️ Back to Login" styleClass="btn-secondary" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+        </VBox>
+
+        <!-- Registration Rules -->
+        <VBox spacing="5.0" alignment="CENTER" styleClass="rules-info">
+            <children>
+                <Label text="📋 Registration Rules:" styleClass="rules-title" />
+                <Label text="• Username: Min 3 characters, letters/numbers/underscore only" styleClass="rule-item" />
+                <Label text="• Password: Min 4 characters" styleClass="rule-item" />
+                <Label text="• All fields are required" styleClass="rule-item" />
+                <Label text="• Passwords must match" styleClass="rule-item" />
+            </children>
+        </VBox>
+
+        <!-- Game Info -->
+        <VBox spacing="5.0" alignment="CENTER" styleClass="game-info">
+            <children>
+                <Label text="🎮 About FBG Game:" styleClass="game-info-title" />
+                <Label text="• Flappy Bird style game with easy mode" styleClass="game-info-item" />
+                <Label text="• Compete with other players on leaderboard" styleClass="game-info-item" />
+                <Label text="• Track your best scores and improvements" styleClass="game-info-item" />
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
